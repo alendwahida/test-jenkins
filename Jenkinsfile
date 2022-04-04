@@ -17,7 +17,7 @@ pipeline {
         }
         stage ('test docker') {
             steps {
-                sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io -y'
+                sh 'sudo apt update && apt install docker-ce docker-ce-cli containerd.io -y'
             }
         }
     }
