@@ -1,5 +1,4 @@
 node('Node-Docker') {
-    agent any
     stages {
         stage('build app') {
             steps {
