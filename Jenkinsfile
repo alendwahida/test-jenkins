@@ -15,5 +15,10 @@ pipeline {
                 sh 'sudo apt install ca-certificates curl gnupg lsb-release'
             }
         }
+        stage ('test docker') {
+            steps {
+                sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io -y'
+            }
+        }
     }
 }
