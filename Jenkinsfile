@@ -1,4 +1,9 @@
-node('agent1') {
+pipeline {
+    agent {
+        node {
+            label 'agent1'
+        }
+    }
     stages {
         stage('build app') {
             steps {
