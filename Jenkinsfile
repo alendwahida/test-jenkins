@@ -1,4 +1,4 @@
-pipeline {
+node('Node-Docker') {
     agent any
     stages {
         stage('build app') {
