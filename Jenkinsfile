@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('build app') {
             steps {
-                sh 'ls -la'
+                sh 'apt update'
             }
         }
         stage ('test app') {
             steps {
-                sh 'du -sh *'
+                sh 'apt install ca-certificates curl gnupg lsb-release'
             }
         }
     }
