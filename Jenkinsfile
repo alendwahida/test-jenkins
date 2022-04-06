@@ -5,17 +5,17 @@ pipeline {
         }
     }
     stages {
-        stage('build app') {
+        stage('docker Version') {
             steps {
-                sh 'sudo apt update'
+                sh 'docker version'
             }
         }
-        stage ('test app') {
+        stage ('pull Github') {
             steps {
-                sh 'sudo apt install ca-certificates curl gnupg lsb-release'
+                sh 'git --version'
             }
         }
-        stage ('test docker') {
+        stage ('docker Build') {
             steps {
                 sh 'docker ps'
             }
