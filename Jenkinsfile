@@ -20,5 +20,15 @@ pipeline {
                 sh 'docker ps'
             }
         }
+        stage ('docker Push ECR') {
+            steps {
+                sh 'docker images'
+            }
+        }
+        stage ('deployment Images EKS') {
+            steps {
+                sh "docker version"
+            }
+        }
     }
 }
